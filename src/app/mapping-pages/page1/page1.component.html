@@ -1,0 +1,87 @@
+<!-- <pre>{{ level| json }}</pre> -->
+<table style="width:90%;margin: 0 auto;" class="table table-striped">
+    <thead>
+      <th>Sr NO</th>
+      <th>PO 1</th>
+      <th>PO 2</th>
+      <th>PO 3</th>
+      <th>PO 4</th>
+      <th>PO 5</th>
+      <th>PO 6</th>
+      <th>PO 7</th>
+      <th>PO 8</th>
+      <th>PO 9</th>
+      <th>PO 10</th>
+      <th>PO 11</th>
+      <th>PO 12</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>CO 1</td>
+        <td *ngFor="let column of columns;let i = index">
+          <select [(ngModel)]="level[0][i]" class="select-tag">
+            <option disabled selected value="empty"></option>
+            <option value="H">H</option>
+            <option value="M">M</option>
+            <option value="L">L</option> 
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>CO 2</td>
+        <td *ngFor="let column of columns;let i = index">
+          <select [(ngModel)]="level[1][i]" class="select-tag">
+            <option disabled selected value="empty"></option>
+            <option value="H">H</option>
+            <option value="M">M</option>
+            <option value="L">L</option> 
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>CO 3</td>
+        <td *ngFor="let column of columns;let i = index">
+          <select [(ngModel)]="level[2][i]" class="select-tag">
+            <option disabled selected value="empty"></option>
+            <option value="H">H</option>
+            <option value="M">M</option>
+            <option value="L">L</option> 
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>CO 4</td>
+        <td *ngFor="let column of columns;let i = index">
+          <select [(ngModel)]="level[3][i]" class="select-tag">
+            <option disabled selected value="empty"></option>
+            <option value="H">H</option>
+            <option value="M">M</option>
+            <option value="L">L</option> 
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>CO 5</td>
+        <td *ngFor="let column of columns;let i = index">
+          <select [(ngModel)]="level[4][i]" class="select-tag">
+            <option disabled selected value="empty"></option>
+            <option value="H">H</option>
+            <option value="M">M</option>
+            <option value="L">L</option> 
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>CO 6</td>
+        <td *ngFor="let column of columns;let i = index">
+          <!-- {{ column }} -->
+          <select [(ngModel)]="level[5][i]" class="select-tag">
+            <option disabled selected value="empty"></option>
+            <option value="H">H</option>
+            <option value="M">M</option>
+            <option value="L">L</option> 
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>

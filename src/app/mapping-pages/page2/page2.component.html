@@ -1,3 +1,97 @@
-<p>
-  page2 works!
-</p>
+<div>
+    <p style="width: 90%;margin: 0 auto;font-size: 20px;font-weight: 700;">CO's And Practicals Mapping</p>
+    <table style="width:90%;margin: 0 auto;border:1px solid lightgrey; margin-top: 15px;" class="table table-striped table-bordered">
+      <thead class="thead-dark">
+        <th>Sr NO</th>
+        <th>Prac 1</th>
+        <th>Prac 2</th>
+        <th>Prac 3</th>
+        <th>Prac 4</th>
+        <th>Prac 5</th>
+        <th>Prac 6</th>
+        <th>Prac 7</th>
+        <th>Prac 8</th>
+        <th>Prac 9</th>
+        <th>Prac 10</th>
+        <th>Prac 11</th>
+        <th>Prac 12</th>
+        <th>Prac 13</th>
+        <th>Prac 14</th>
+        <th>Prac 15</th>
+        <th>Prac 16</th>
+        <th>Prac 17</th>
+        <th>Prac 18</th>
+        <th>Prac 19</th>
+        <th>Prac 20</th>
+      </thead>
+      <tbody>
+          <tr>
+            <td>CO 1</td>
+            <td *ngFor="let column of experimentColumns;let i = index">
+              <select [(ngModel)]="experimentLevel[0][i]" class="select-tag">
+                <option selected value="empty">N</option>
+                <option value="H">H</option>
+                <option value="M">M</option>
+                <option value="L">L</option> 
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>CO 2</td>
+            <td *ngFor="let column of experimentColumns;let i = index">
+              <select [(ngModel)]="experimentLevel[1][i]" class="select-tag">
+                <option selected value="empty">N</option>
+                <option value="H">H</option>
+                <option value="M">M</option>
+                <option value="L">L</option> 
+              </select>
+            </td>
+          </tr>
+          <tr>
+              <td>CO 3</td>
+              <td *ngFor="let column of experimentColumns;let i = index">
+                <select [(ngModel)]="experimentLevel[2][i]" class="select-tag">
+                  <option selected value="empty">N</option>
+                  <option value="H">H</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option> 
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>CO 4</td>
+              <td *ngFor="let column of experimentColumns;let i = index">
+                <select [(ngModel)]="experimentLevel[3][i]" class="select-tag">
+                  <option selected value="empty">N</option>
+                  <option value="H">H</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option> 
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>CO 5</td>
+              <td *ngFor="let column of experimentColumns;let i = index">
+                <select [(ngModel)]="experimentLevel[4][i]" class="select-tag">
+                  <option selected value="empty">N</option>
+                  <option value="H">H</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option> 
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>CO 6</td>
+              <td *ngFor="let column of experimentColumns;let i = index">
+                <select [(ngModel)]="experimentLevel[5][i]" class="select-tag">
+                  <option selected value="empty">N</option>
+                  <option value="H">H</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option> 
+                </select>
+              </td>
+            </tr>
+      </tbody>
+    </table>  
+</div>
+<!-- <pre>{{ experimentLevel | json}}</pre> -->

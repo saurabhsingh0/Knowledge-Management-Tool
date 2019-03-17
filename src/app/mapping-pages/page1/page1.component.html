@@ -1,87 +1,201 @@
 <!-- <pre>{{ level| json }}</pre> -->
-<table style="width:90%;margin: 0 auto;" class="table table-striped">
-    <thead>
-      <th>Sr NO</th>
-      <th>PO 1</th>
-      <th>PO 2</th>
-      <th>PO 3</th>
-      <th>PO 4</th>
-      <th>PO 5</th>
-      <th>PO 6</th>
-      <th>PO 7</th>
-      <th>PO 8</th>
-      <th>PO 9</th>
-      <th>PO 10</th>
-      <th>PO 11</th>
-      <th>PO 12</th>
-    </thead>
-    <tbody>
-      <tr>
-        <td>CO 1</td>
-        <td *ngFor="let column of columns;let i = index">
-          <select [(ngModel)]="level[0][i]" class="select-tag">
-            <option disabled selected value="empty"></option>
-            <option value="H">H</option>
-            <option value="M">M</option>
-            <option value="L">L</option> 
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>CO 2</td>
-        <td *ngFor="let column of columns;let i = index">
-          <select [(ngModel)]="level[1][i]" class="select-tag">
-            <option disabled selected value="empty"></option>
-            <option value="H">H</option>
-            <option value="M">M</option>
-            <option value="L">L</option> 
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>CO 3</td>
-        <td *ngFor="let column of columns;let i = index">
-          <select [(ngModel)]="level[2][i]" class="select-tag">
-            <option disabled selected value="empty"></option>
-            <option value="H">H</option>
-            <option value="M">M</option>
-            <option value="L">L</option> 
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>CO 4</td>
-        <td *ngFor="let column of columns;let i = index">
-          <select [(ngModel)]="level[3][i]" class="select-tag">
-            <option disabled selected value="empty"></option>
-            <option value="H">H</option>
-            <option value="M">M</option>
-            <option value="L">L</option> 
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>CO 5</td>
-        <td *ngFor="let column of columns;let i = index">
-          <select [(ngModel)]="level[4][i]" class="select-tag">
-            <option disabled selected value="empty"></option>
-            <option value="H">H</option>
-            <option value="M">M</option>
-            <option value="L">L</option> 
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>CO 6</td>
-        <td *ngFor="let column of columns;let i = index">
-          <!-- {{ column }} -->
-          <select [(ngModel)]="level[5][i]" class="select-tag">
-            <option disabled selected value="empty"></option>
-            <option value="H">H</option>
-            <option value="M">M</option>
-            <option value="L">L</option> 
-          </select>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<div class="container">
+  <div class="row">
+    <div class="col input-group mb-3">
+      <span class="input-group-text">Subject Name:</span>
+      <input type="text" class="form-control" placeholder="Subject">
+    </div>
+    <div class="col input-group mb-3">
+        <span class="input-group-text">Class & Div:</span>
+        <input type="text" aria-label="Class" class="form-control">
+        <input type="text" aria-label="Div" class="form-control">
+    </div>
+    <div class="w-100"></div>
+    <div class="col input-group mb-3">
+      <span class="input-group-text">Academic Year:</span>
+      <input type="text" class="form-control" placeholder="Year">
+    </div>
+    <div class="col input-group mb-3">
+      <span class="input-group-text">Sem:</span>
+      <input type="text" class="form-control" placeholder="Semester">
+    </div>
+  </div>
+</div>
+<br>
+<br>
+  <div>
+    <div style="margin-bottom:20px;">
+      <p style="width: 90%;margin: 0 auto;font-size: 20px;font-weight: 700;">CO's And PO's Mapping</p>
+      <button (click)="openTable('firstTable')" style="float:right;margin-right:10%;" class="btn btn-primary" *ngIf="table=='secondTable'">View</button>
+    </div>
+    <table style="width:90%;margin: 15px auto;border:1px solid lightgrey;" class="table table-striped table-bordered" id="firstTable" *ngIf="table=='firstTable'">
+      <thead class="thead-dark">
+        <th>Sr NO</th>
+        <th>PO 1</th>
+        <th>PO 2</th>
+        <th>PO 3</th>
+        <th>PO 4</th>
+        <th>PO 5</th>
+        <th>PO 6</th>
+        <th>PO 7</th>
+        <th>PO 8</th>
+        <th>PO 9</th>
+        <th>PO 10</th>
+        <th>PO 11</th>
+        <th>PO 12</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CO 1</td>
+          <td *ngFor="let column of columns;let i = index">
+            <select [(ngModel)]="level[0][i]" class="select-tag">
+              <option  selected value="empty"></option>
+              <option value="H">H</option>
+              <option value="M">M</option>
+              <option value="L">L</option> 
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>CO 2</td>
+          <td *ngFor="let column of columns;let i = index">
+            <select [(ngModel)]="level[1][i]" class="select-tag">
+              <option selected value="empty"></option>
+              <option value="H">H</option>
+              <option value="M">M</option>
+              <option value="L">L</option> 
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>CO 3</td>
+          <td *ngFor="let column of columns;let i = index">
+            <select [(ngModel)]="level[2][i]" class="select-tag">
+              <option selected value="empty"></option>
+              <option value="H">H</option>
+              <option value="M">M</option>
+              <option value="L">L</option> 
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>CO 4</td>
+          <td *ngFor="let column of columns;let i = index">
+            <select [(ngModel)]="level[3][i]" class="select-tag">
+              <option selected value="empty"></option>
+              <option value="H">H</option>
+              <option value="M">M</option>
+              <option value="L">L</option> 
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>CO 5</td>
+          <td *ngFor="let column of columns;let i = index">
+            <select [(ngModel)]="level[4][i]" class="select-tag">
+              <option selected value="empty"></option>
+              <option value="H">H</option>
+              <option value="M">M</option>
+              <option value="L">L</option> 
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>CO 6</td>
+          <td *ngFor="let column of columns;let i = index">
+            <!-- {{ column }} -->
+            <select [(ngModel)]="level[5][i]" class="select-tag">
+              <option selected value="empty"></option>
+              <option value="H">H</option>
+              <option value="M">M</option>
+              <option value="L">L</option> 
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <div style="margin-bottom:20px;">
+      <p style="width: 90%;margin: 0 auto;font-size: 20px;font-weight: 700;">CO's And PSO's Mapping</p>
+      <button (click)="openTable('secondTable')" style="float:right;margin-right:10%;" class="btn btn-primary" *ngIf="table=='firstTable'">View</button>
+    </div>
+    <table style="width:90%;margin: 0 auto;border:1px solid lightgrey; margin-top: 15px;" class="table table-striped table-bordered" id="secondTable" *ngIf="table=='secondTable'">
+      <thead class="thead-dark">
+        <th>Sr NO</th>
+        <th>PSO 1</th>
+        <th>PSO 2</th>
+        <th>PSO 3</th>
+        <th>PSO 4</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CO 1</td>
+          <td *ngFor="let column of psoColumns;let i = index">
+            <select [(ngModel)]="psoLevel[0][i]" class="select-tag">
+              <option selected value="empty">N</option>
+              <option value="H">H</option>
+              <option value="M">M</option>
+              <option value="L">L</option> 
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>CO 2</td>
+          <td *ngFor="let column of psoColumns;let i = index">
+            <select [(ngModel)]="psoLevel[1][i]" class="select-tag">
+              <option disabled selected value="empty">N</option>
+              <option value="H">H</option>
+              <option value="M">M</option>
+              <option value="L">L</option> 
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>CO 3</td>
+          <td *ngFor="let column of psoColumns;let i = index">
+            <select [(ngModel)]="psoLevel[2][i]" class="select-tag">
+              <option disabled selected value="empty">N</option>
+              <option value="H">H</option>
+              <option value="M">M</option>
+              <option value="L">L</option> 
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>CO 4</td>
+          <td *ngFor="let column of psoColumns;let i = index">
+            <select [(ngModel)]="psoLevel[3][i]" class="select-tag">
+              <option disabled selected value="empty">N</option>
+              <option value="H">H</option>
+              <option value="M">M</option>
+              <option value="L">L</option> 
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>CO 5</td>
+          <td *ngFor="let column of psoColumns;let i = index">
+            <select [(ngModel)]="psoLevel[4][i]" class="select-tag">
+              <option disabled selected value="empty">N</option>
+              <option value="H">H</option>
+              <option value="M">M</option>
+              <option value="L">L</option> 
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>CO 6</td>
+          <td *ngFor="let column of psoColumns;let i = index">
+            <select [(ngModel)]="psoLevel[5][i]" class="select-tag">
+              <option selected value="empty">N</option>
+              <option value="H">H</option>
+              <option value="M">M</option>
+              <option value="L">L</option> 
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>  
+  </div>
+  <!-- <pre>{{ psoLevel| json }}</pre> -->

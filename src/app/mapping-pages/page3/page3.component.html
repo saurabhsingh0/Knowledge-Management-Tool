@@ -1,3 +1,58 @@
-<p>
-  page3 works!
-</p>
+<div style="width:90%;margin:0 auto;">
+  <input type="text" [(ngModel)]="preData.questions">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" (click)=" openDetailsPopup()" aria-placeholder="">
+      Open modal
+    </button>
+</div>
+
+  
+        <!-- <span *ngFor="let question of preData.data;let i = index">
+            <div *ngFor="let sub of question[i];let inner = index">
+                {{ i+1 }}
+
+            </div>
+
+        </span> -->
+        
+   
+
+
+   <!-- The Modal -->
+   <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+              <table class="table table-striped">
+                  <thead>
+                    <th>Question</th>
+                    <th>No of Sub questions</th>
+                    <th>No of Sub questions</th>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let question of preData.data;let i = index">
+                          <td>{{ i+1  }}</td> 
+                          <td><input type="text" [(ngModel)]="question.subDivs"></td>
+                          <td><input type="text" [(ngModel)]="question.innerSubDivs"></td>
+                      </tr>     
+                  </tbody>
+                </table>
+               
+          </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-lg btn-success" (click)="generateTable()">Done</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>

@@ -17,19 +17,19 @@ const routes: Routes = [
       {
         path:'page2',
         component:Page2Component,
-        
+
       },
       {
         path:'page3',
         component:Page3Component,
-        
+
       }
     ]
   }
 ];
 
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class MappingPagesRoutingModule { }
+  @NgModule({
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
+  })
+  export class MappingPagesRoutingModule { }

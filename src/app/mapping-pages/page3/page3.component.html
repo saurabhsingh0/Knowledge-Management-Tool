@@ -5,7 +5,7 @@
     </button>
 </div>
 
-  
+
         <!-- <span *ngFor="let question of preData.data;let i = index">
             <div *ngFor="let sub of question[i];let inner = index">
                 {{ i+1 }}
@@ -13,23 +13,24 @@
             </div>
 
         </span> -->
-        
-   
+
+
 
 
    <!-- The Modal -->
    <div class="modal" id="myModal">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content">
-        
+
           <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Modal Heading</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
-          
+
           <!-- Modal body -->
           <div class="modal-body">
+            <p>{{test}}</p>
               <table class="table table-striped">
                   <thead>
                     <th>Question</th>
@@ -38,21 +39,21 @@
                   </thead>
                   <tbody>
                       <tr *ngFor="let question of preData.data;let i = index">
-                          <td>{{ i+1  }}</td> 
-                          <td><input type="text" [(ngModel)]="question.subDivs"></td>
-                          <td><input type="text" [(ngModel)]="question.innerSubDivs"></td>
+                          <td>{{ i+1  }}</td>
+                          <td><input type="text" [(ngModel)]="question.subDivs" (keyup)="changeSubQuest(question.subDivs,i,$event)"></td>
+                          <td *ngFor="let each of question.innerSubDivs,let j=index"><input type="text" [(ngModel)]="question.innerSubDivs[j]" style="width:100px;"></td>
                       </tr>     
                   </tbody>
                 </table>
-               
+
           </div>
-          
+
           <!-- Modal footer -->
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-lg btn-success" (click)="generateTable()">Done</button>
+            <button type="button" class="btn btn-success" (click)="generateTable()">Done</button>
           </div>
-          
+
         </div>
       </div>
     </div>

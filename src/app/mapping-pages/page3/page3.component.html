@@ -56,3 +56,22 @@
         </div>
       </div>
     </div>
+
+    <table class="table table-striped">
+      <thead>
+        <th>CO1</th>
+        <th>CO2</th>
+        <th>CO3</th>
+        <th>CO4</th>
+        <th>CO5</th>
+        <th>CO6</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of subject.students">
+          <td *ngFor="let co of student.co">
+            {{ co.total }}
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>

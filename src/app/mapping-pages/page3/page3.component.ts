@@ -14,9 +14,9 @@ export class Page3Component implements OnInit {
 
   };
 
-  subject={
-    name:'DWM',
-    students:[
+  subject={ //for semester mapping
+    DWM:{
+      students:[
       {
         rollNo:1,
         marks:[
@@ -546,12 +546,119 @@ export class Page3Component implements OnInit {
         ],
       }
     ]
+  }
   };
+
+  assignmentMapping = {
+    DWM:{
+      students:[
+        {
+          rollNo:1,
+          marks:[
+            {
+              1:[{a:2,co:0}],
+              2:[{a:10,co:0}],
+              3:[{a:2,co:0}],
+              4:[{a:2,co:0}],
+              5:[{a:10,co:2}]
+            }
+          ],
+          co:[
+          {
+              total:0,
+              percentage:0,          
+              grandTotal:80
+          },
+          {
+              total:0,
+              percentage:0,          
+              grandTotal:12
+          },
+          {
+              total:0,
+              percentage:0,          
+              grandTotal:20
+          },
+          {
+              total:0,
+              percentage:0,          
+              grandTotal:14
+          },
+          {
+              total:0,
+              percentage:0,          
+              grandTotal:6
+          },
+          {
+              total:0,       
+              percentage:0,   
+              grandTotal:2
+          }
+        ],
+        },
+      ]
+    }
+  };
+
+  termtestMapping = {
+    DWM:{
+      students:[
+        {
+          rollNo:1,
+          marks:[
+            {
+              1:[{a:2,co:0}],
+              2:[{a:10,co:0}],
+              3:[{a:2,co:0}],
+              4:[{a:2,co:0}],
+              5:[{a:10,co:2}]
+            }
+          ],
+          co:[
+          {
+              total:0,
+              percentage:0,          
+              grandTotal:80
+          },
+          {
+              total:0,
+              percentage:0,          
+              grandTotal:12
+          },
+          {
+              total:0,
+              percentage:0,          
+              grandTotal:20
+          },
+          {
+              total:0,
+              percentage:0,          
+              grandTotal:14
+          },
+          {
+              total:0,
+              percentage:0,          
+              grandTotal:6
+          },
+          {
+              total:0,       
+              percentage:0,   
+              grandTotal:2
+          }
+        ],
+        },
+      ]
+    }
+  }
     
   constructor() { }
 
   ngOnInit() {
-    this.generateCo();
+    this.generateCo(this.subject.DWM.students);
+    this.generateCo(this.assignmentMapping.DWM.students);
+    this.generateCo(this.termtestMapping.DWM.students);
+    console.log(this.subject);
+    console.log(this.assignmentMapping);
   }
 
   openDetailsPopup(){
@@ -569,6 +676,8 @@ export class Page3Component implements OnInit {
     }
   }
 
+  
+
   generateTable(){
     for(let questionIndex=0;questionIndex<this.preData.data.length;questionIndex++ ){
       let innerDivs = parseInt(this.preData.data[questionIndex].innerSubDivs);
@@ -585,8 +694,8 @@ export class Page3Component implements OnInit {
     console.log(this.preData);
   }
 
-  generateCo(){
-    for(let student of this.subject.students){
+  generateCo(subjectStudents){
+    for(let student of subjectStudents){
       console.log("roll no="+student.rollNo);
       for(let questionNo of Object.keys(student.marks[0])){
         for(let question of student.marks[0][questionNo]){
@@ -599,7 +708,7 @@ export class Page3Component implements OnInit {
         co.percentage = parseFloat((co.total/co.grandTotal).toFixed(2)) * 100;
       }
     }
-    console.log(this.subject);
+    
   }
 
 }

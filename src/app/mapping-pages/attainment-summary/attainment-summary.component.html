@@ -1,0 +1,36 @@
+<div>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>PO</th>
+        <th *ngFor="let po of avgPOEndSem,let i=index">PO {{ i+1 }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>IAT</td>
+        <td *ngFor="let po of avgPOIAT">{{ po }}</td>
+      </tr>
+      <tr>
+        <td>SEE</td>
+        <td *ngFor="let po of avgPOEndSem">{{ po }}</td>
+      </tr>
+      <tr>
+        <td>Assignments</td>
+        <td *ngFor="let po of avgPOAssignment">{{ po }}</td>
+      </tr>
+      <tr>
+        <td>Praticals</td>
+        <td *ngFor="let po of avgPOPracs">{{ po }}</td>
+      </tr>
+      <tr>
+        <td>Course Survey</td>
+        <td *ngFor="let po of avgPOSurvey">{{ po }}</td>
+      </tr>
+      <tr>
+        <td>Avg</td>
+        <td *ngFor="let po of avgPOAttainemnt">{{ po['avgAttainemnt'] }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

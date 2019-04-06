@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MappingServiceService } from '../../services/mapping/mapping-service.service'
 
 @Component({
   selector: 'app-page1',
@@ -52,7 +53,7 @@ export class Page1Component implements OnInit {
     ],
   ];
   columns=[1,2,3,4,5,6,7,8,9,10,11,12];
-  constructor() { }
+  constructor(private mappingService:MappingServiceService) { }
 
   ngOnInit() {
   }
@@ -68,4 +69,16 @@ export class Page1Component implements OnInit {
 
   }
 
+  printLevel(){
+    //console.log(this.level);
+  }
+  saveCOLevels(){
+    this.mappingService.coLevels=this.level;
+    console.log(this.mappingService.coLevels);
+  }
+
+  savePSOLevels(){
+    this.mappingService.psoLevels=this.psoLevel;
+    console.log(this.mappingService.psoLevels);
+  }
 }

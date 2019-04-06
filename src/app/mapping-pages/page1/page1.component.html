@@ -48,7 +48,7 @@
         <tr>
           <td>CO 1</td>
           <td *ngFor="let column of columns;let i = index">
-            <select [(ngModel)]="level[0][i]" class="select-tag">
+            <select [(ngModel)]="level[0][i]" class="select-tag" (click)="printLevel()">
               <option  selected value="empty"></option>
               <option value="H">H</option>
               <option value="M">M</option>
@@ -59,7 +59,7 @@
         <tr>
           <td>CO 2</td>
           <td *ngFor="let column of columns;let i = index">
-            <select [(ngModel)]="level[1][i]" class="select-tag">
+            <select [(ngModel)]="level[1][i]" class="select-tag" (click)="printLevel()">
               <option selected value="empty"></option>
               <option value="H">H</option>
               <option value="M">M</option>
@@ -70,7 +70,7 @@
         <tr>
           <td>CO 3</td>
           <td *ngFor="let column of columns;let i = index">
-            <select [(ngModel)]="level[2][i]" class="select-tag">
+            <select [(ngModel)]="level[2][i]" class="select-tag" (click)="printLevel()">
               <option selected value="empty"></option>
               <option value="H">H</option>
               <option value="M">M</option>
@@ -81,7 +81,7 @@
         <tr>
           <td>CO 4</td>
           <td *ngFor="let column of columns;let i = index">
-            <select [(ngModel)]="level[3][i]" class="select-tag">
+            <select [(ngModel)]="level[3][i]" class="select-tag" (click)="printLevel()">
               <option selected value="empty"></option>
               <option value="H">H</option>
               <option value="M">M</option>
@@ -92,7 +92,7 @@
         <tr>
           <td>CO 5</td>
           <td *ngFor="let column of columns;let i = index">
-            <select [(ngModel)]="level[4][i]" class="select-tag">
+            <select [(ngModel)]="level[4][i]" class="select-tag" (click)="printLevel()">
               <option selected value="empty"></option>
               <option value="H">H</option>
               <option value="M">M</option>
@@ -104,7 +104,7 @@
           <td>CO 6</td>
           <td *ngFor="let column of columns;let i = index">
             <!-- {{ column }} -->
-            <select [(ngModel)]="level[5][i]" class="select-tag">
+            <select [(ngModel)]="level[5][i]" class="select-tag" (click)="printLevel()">
               <option selected value="empty"></option>
               <option value="H">H</option>
               <option value="M">M</option>
@@ -114,6 +114,7 @@
         </tr>
       </tbody>
     </table>
+    <button class="btn btn-primary" (click)="saveCOLevels()">Save CO</button>
   </div>
   <div>
     <div style="margin-bottom:20px;">
@@ -197,5 +198,6 @@
         </tr>
       </tbody>
     </table>  
+    <button class="btn btn-primary" (click)="savePSOLevels()">Save PSO</button>
   </div>
   <!-- <pre>{{ psoLevel| json }}</pre> -->

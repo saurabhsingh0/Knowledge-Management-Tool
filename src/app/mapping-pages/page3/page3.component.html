@@ -33,13 +33,25 @@
                   <thead>
                     <th>Question</th>
                     <th>No of Sub questions</th>
-                    <th>No of Sub questions</th>
+                    <th>Marks of Questions</th>
                   </thead>
                   <tbody>
                       <tr *ngFor="let question of preData.data;let i = index">
                           <td>{{ i+1  }}</td> 
                           <td><input type="text" [(ngModel)]="question['subDivs']" (keyup)="changeSubQuest(question.subDivs,i)"></td>
-                          <td *ngFor="let each of question.innerSubDivs,let j=index"><input type="text" [(ngModel)]="each['innerSubDivs']" style="width:100px;"></td>
+                          <td *ngFor="let each of question.innerSubDivs,let j=index">
+                            <input type="text" [(ngModel)]="each['marks']" style="width:50px;">
+                            <!-- <input type="text" [(ngModel)]="each['co']" style="width:50px;"> -->
+                            <select class="select-tag" [(ngModel)]="each['co']">
+                              <option  selected value="empty"></option>
+                              <option value="CO1">CO1</option>
+                              <option value="CO2">CO2</option>
+                              <option value="CO3">CO3</option>
+                              <option value="CO4">CO4</option>
+                              <option value="CO5">CO5</option>
+                              <option value="CO6">CO6</option> 
+                            </select>
+                          </td>
                       </tr>     
                   </tbody>
                 </table>

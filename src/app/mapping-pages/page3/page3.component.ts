@@ -679,35 +679,36 @@ export class Page3Component implements OnInit {
   
 
   generateTable(){
-    for(let questionIndex=0;questionIndex<this.preData.data.length;questionIndex++ ){
-      let innerDivs = parseInt(this.preData.data[questionIndex].innerSubDivs);
-      let divs = parseInt(this.preData.data[questionIndex].subDivs);
-      for(let subIndex=0;subIndex<divs;subIndex++){
-        this.preData.data[questionIndex][subIndex] = new Array(innerDivs).fill({
-          co:null,
-          mark:null,
-          btLo:null
-        });
+    // for(let questionIndex=0;questionIndex<this.preData.data.length;questionIndex++ ){
+    //   let innerDivs = parseInt(this.preData.data[questionIndex].innerSubDivs);
+    //   let divs = parseInt(this.preData.data[questionIndex].subDivs);
+    //   for(let subIndex=0;subIndex<divs;subIndex++){
+    //     this.preData.data[questionIndex][subIndex] = new Array(innerDivs).fill({
+    //       co:null,
+    //       mark:null,
+    //       btLo:null
+    //     });
         
-      }
-    };
+    //   }
+    // };
     console.log(this.preData);
   }
 
   generateCo(subjectStudents){
-    for(let student of subjectStudents){
-      console.log("roll no="+student.rollNo);
-      for(let questionNo of Object.keys(student.marks[0])){
-        for(let question of student.marks[0][questionNo]){
-          console.log(question.co);
-          student.co[question.co].total += parseInt(question.a) || parseInt(question.b) || parseInt(question.c) || parseInt(question.d) || parseInt(question.e); 
-        }
-      }
+    console.log(this.preData);
+    // for(let student of subjectStudents){
+    //   console.log("roll no="+student.rollNo);
+    //   for(let questionNo of Object.keys(student.marks[0])){
+    //     for(let question of student.marks[0][questionNo]){
+    //       console.log(question.co);
+    //       student.co[question.co].total += parseInt(question.a) || parseInt(question.b) || parseInt(question.c) || parseInt(question.d) || parseInt(question.e); 
+    //     }
+    //   }
 
-      for(let co of student.co){
-        co.percentage = parseFloat((co.total/co.grandTotal).toFixed(2)) * 100;
-      }
-    }
+    //   for(let co of student.co){
+    //     co.percentage = parseFloat((co.total/co.grandTotal).toFixed(2)) * 100;
+    //   }
+    // }
     
   }
 
@@ -719,7 +720,8 @@ export class Page3Component implements OnInit {
     let data=[];
     for(let i=0;i<subDiv;i++){
       let object={
-        'innerSubDivs':0
+        'marks':0,
+        'co':''
       }
       data.push(object);
     }

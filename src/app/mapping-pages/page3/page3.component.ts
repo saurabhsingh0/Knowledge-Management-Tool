@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-page3',
   templateUrl: './page3.component.html',
@@ -14,537 +15,532 @@ export class Page3Component implements OnInit {
 
   };
 
-  subject={ //for semester mapping
+  Object = Object;
+
+  subject:any={ //for semester mapping
     DWM:{
       students:[
       {
         rollNo:1,
         marks:[
-          {
-            1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
-            2:[{a:10,co:0},{b:2,co:0}],
-            3:[{a:2,co:3},{b:2,co:4}],
-            4:[{a:2,co:4},{b:2,co:5}],
-            5:[{a:10,co:0},{b:10,co:1}]
-          }
         ],
         co:[
         {
             total:0,
             percentage:0,          
-            grandTotal:30
+            grandTotal:0
         },
         {
             total:0,
             percentage:0,          
-            grandTotal:15
+            grandTotal:0
         },
         {
             total:0,
             percentage:0,          
-            grandTotal:4
+            grandTotal:0
         },
         {
             total:0,
             percentage:0,          
-            grandTotal:14
+            grandTotal:0
         },
         {
             total:0,
             percentage:0,          
-            grandTotal:6
+            grandTotal:0
         },
         {
             total:0,       
             percentage:0,   
-            grandTotal:2
+            grandTotal:0
         }
       ],
       },
-      {
-        rollNo:2,
-        marks:[
-          {
-            1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
-            2:[{a:10,co:0},{b:2,co:0}],
-            3:[{a:2,co:3},{b:2,co:4}],
-            4:[{a:2,co:4},{b:2,co:5}],
-            5:[{a:10,co:0},{b:10,co:1}]
-          }
-        ],
-        co:[
-          {
-              total:0,
-              percentage:0,          
-              grandTotal:18
-          },
-          {
-              total:0,
-              percentage:0,          
-              grandTotal:12
-          },
-          {
-              total:0,
-              percentage:0,          
-              grandTotal:4
-          },
-          {
-              total:0,
-              percentage:0,          
-              grandTotal:14
-          },
-          {
-              total:0,
-              percentage:0,          
-              grandTotal:6
-          },
-          {
-              total:0,   
-              percentage:0,       
-              grandTotal:2
-          }
-        ],
-      },
+      // {
+      //   rollNo:2,
+      //   marks:[
+      //     {
+      //       1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
+      //       2:[{a:10,co:0},{b:2,co:0}],
+      //       3:[{a:2,co:3},{b:2,co:4}],
+      //       4:[{a:2,co:4},{b:2,co:5}],
+      //       5:[{a:10,co:0},{b:10,co:1}]
+      //     }
+      //   ],
+      //   co:[
+      //     {
+      //         total:0,
+      //         percentage:0,          
+      //         grandTotal:18
+      //     },
+      //     {
+      //         total:0,
+      //         percentage:0,          
+      //         grandTotal:12
+      //     },
+      //     {
+      //         total:0,
+      //         percentage:0,          
+      //         grandTotal:4
+      //     },
+      //     {
+      //         total:0,
+      //         percentage:0,          
+      //         grandTotal:14
+      //     },
+      //     {
+      //         total:0,
+      //         percentage:0,          
+      //         grandTotal:6
+      //     },
+      //     {
+      //         total:0,   
+      //         percentage:0,       
+      //         grandTotal:2
+      //     }
+      //   ],
+      // },
       
-      {
-        rollNo:3,
-        marks:[
-          {
-            1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
-            2:[{a:10,co:0},{b:2,co:0}],
-            3:[{a:2,co:3},{b:2,co:4}],
-            4:[{a:2,co:4},{b:2,co:5}],
-            5:[{a:10,co:0},{b:10,co:1}]
-          }
-        ],
-        co:[
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:18
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:12
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:4
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:14
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:6
-        },
-        {
-            total:0,     
-            percentage:0,     
-            grandTotal:2
-        }
-      ],
-      },
-      {
-        rollNo:4,
-        marks:[
-          {
-            1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
-            2:[{a:10,co:0},{b:2,co:0}],
-            3:[{a:2,co:3},{b:2,co:4}],
-            4:[{a:2,co:4},{b:2,co:5}],
-            5:[{a:10,co:0},{b:10,co:1}]
-          }
-        ],
-        co:[
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:18
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:12
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:4
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:14
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:6
-        },
-        {
-            total:0,     
-            percentage:0,     
-            grandTotal:2
-        }
-      ],
-      },
-      {
-        rollNo:5,
-        marks:[
-          {
-            1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
-            2:[{a:10,co:0},{b:2,co:0}],
-            3:[{a:2,co:3},{b:2,co:4}],
-            4:[{a:2,co:4},{b:2,co:5}],
-            5:[{a:10,co:0},{b:10,co:1}]
-          }
-        ],
-        co:[
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:18
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:12
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:4
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:14
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:6
-        },
-        {
-            total:0,     
-            percentage:0,     
-            grandTotal:2
-        }
-      ],
-      },
-      {
-        rollNo:6,
-        marks:[
-          {
-            1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
-            2:[{a:10,co:0},{b:2,co:0}],
-            3:[{a:2,co:3},{b:2,co:4}],
-            4:[{a:2,co:4},{b:2,co:5}],
-            5:[{a:10,co:0},{b:10,co:1}]
-          }
-        ],
-        co:[
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:18
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:12
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:4
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:14
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:6
-        },
-        {
-            total:0,     
-            percentage:0,     
-            grandTotal:2
-        }
-      ],
-      },
-      {
-        rollNo:7,
-        marks:[
-          {
-            1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
-            2:[{a:10,co:0},{b:2,co:0}],
-            3:[{a:2,co:3},{b:2,co:4}],
-            4:[{a:2,co:4},{b:2,co:5}],
-            5:[{a:10,co:0},{b:10,co:1}]
-          }
-        ],
-        co:[
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:18
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:12
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:4
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:14
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:6
-        },
-        {
-            total:0,     
-            percentage:0,     
-            grandTotal:2
-        }
-      ],
-      },
-      {
-        rollNo:8,
-        marks:[
-          {
-            1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
-            2:[{a:10,co:0},{b:2,co:0}],
-            3:[{a:2,co:3},{b:2,co:4}],
-            4:[{a:2,co:4},{b:2,co:5}],
-            5:[{a:10,co:0},{b:10,co:1}]
-          }
-        ],
-        co:[
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:18
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:12
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:4
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:14
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:6
-        },
-        {
-            total:0,   
-            percentage:0,       
-            grandTotal:2
-        }
-      ],
-      },
-      {
-        rollNo:9,
-        marks:[
-          {
-            1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
-            2:[{a:10,co:0},{b:2,co:0}],
-            3:[{a:2,co:3},{b:2,co:4}],
-            4:[{a:2,co:4},{b:2,co:5}],
-            5:[{a:10,co:0},{b:10,co:1}]
-          }
-        ],
-        co:[
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:18
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:12
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:4
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:14
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:6
-        },
-        {
-            total:0,     
-            percentage:0,     
-            grandTotal:2
-        }
-      ],
-      },
-      {
-        rollNo:10,
-        marks:[
-          {
-            1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
-            2:[{a:10,co:0},{b:2,co:0}],
-            3:[{a:2,co:3},{b:2,co:4}],
-            4:[{a:2,co:4},{b:2,co:5}],
-            5:[{a:10,co:0},{b:10,co:1}]
-          }
-        ],
-        co:[
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:18
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:12
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:4
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:14
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:6
-        },
-        {
-            total:0,          
-            grandTotal:2,
-            percentage:0,
-        }
-      ],
-      },
-      {
-        rollNo:11,
-        marks:[
-          {
-            1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
-            2:[{a:10,co:0},{b:2,co:0}],
-            3:[{a:2,co:3},{b:2,co:4}],
-            4:[{a:2,co:4},{b:2,co:5}],
-            5:[{a:10,co:0},{b:10,co:1}]
-          }
-        ],
-        co:[
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:18
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:12
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:4
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:14
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:6
-        },
-        {
-            total:0,
-            percentage:0,          
-            grandTotal:2
-        }
-      ],
-      },
-      {
-        rollNo:12,
-        marks:[
-          {
-            1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
-            2:[{a:10,co:0},{b:2,co:0}],
-            3:[{a:2,co:3},{b:2,co:4}],
-            4:[{a:2,co:4},{b:2,co:5}],
-            5:[{a:10,co:0},{b:10,co:1}]
-          }
-        ],
-        co:[
-          {
-              total:0,
-              percentage:0,          
-              grandTotal:18
-          },
-          {
-              total:0,
-              percentage:0,          
-              grandTotal:12
-          },
-          {
-              total:0,
-              percentage:0,          
-              grandTotal:4
-          },
-          {
-              total:0,
-              percentage:0,          
-              grandTotal:14
-          },
-          {
-              total:0,
-              percentage:0,          
-              grandTotal:6
-          },
-          {
-              total:0,          
-              grandTotal:2
-          }
-        ],
-      }
+      // {
+      //   rollNo:3,
+      //   marks:[
+      //     {
+      //       1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
+      //       2:[{a:10,co:0},{b:2,co:0}],
+      //       3:[{a:2,co:3},{b:2,co:4}],
+      //       4:[{a:2,co:4},{b:2,co:5}],
+      //       5:[{a:10,co:0},{b:10,co:1}]
+      //     }
+      //   ],
+      //   co:[
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:18
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:12
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:4
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:14
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:6
+      //   },
+      //   {
+      //       total:0,     
+      //       percentage:0,     
+      //       grandTotal:2
+      //   }
+      // ],
+      // },
+      // {
+      //   rollNo:4,
+      //   marks:[
+      //     {
+      //       1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
+      //       2:[{a:10,co:0},{b:2,co:0}],
+      //       3:[{a:2,co:3},{b:2,co:4}],
+      //       4:[{a:2,co:4},{b:2,co:5}],
+      //       5:[{a:10,co:0},{b:10,co:1}]
+      //     }
+      //   ],
+      //   co:[
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:18
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:12
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:4
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:14
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:6
+      //   },
+      //   {
+      //       total:0,     
+      //       percentage:0,     
+      //       grandTotal:2
+      //   }
+      // ],
+      // },
+      // {
+      //   rollNo:5,
+      //   marks:[
+      //     {
+      //       1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
+      //       2:[{a:10,co:0},{b:2,co:0}],
+      //       3:[{a:2,co:3},{b:2,co:4}],
+      //       4:[{a:2,co:4},{b:2,co:5}],
+      //       5:[{a:10,co:0},{b:10,co:1}]
+      //     }
+      //   ],
+      //   co:[
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:18
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:12
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:4
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:14
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:6
+      //   },
+      //   {
+      //       total:0,     
+      //       percentage:0,     
+      //       grandTotal:2
+      //   }
+      // ],
+      // },
+      // {
+      //   rollNo:6,
+      //   marks:[
+      //     {
+      //       1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
+      //       2:[{a:10,co:0},{b:2,co:0}],
+      //       3:[{a:2,co:3},{b:2,co:4}],
+      //       4:[{a:2,co:4},{b:2,co:5}],
+      //       5:[{a:10,co:0},{b:10,co:1}]
+      //     }
+      //   ],
+      //   co:[
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:18
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:12
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:4
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:14
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:6
+      //   },
+      //   {
+      //       total:0,     
+      //       percentage:0,     
+      //       grandTotal:2
+      //   }
+      // ],
+      // },
+      // {
+      //   rollNo:7,
+      //   marks:[
+      //     {
+      //       1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
+      //       2:[{a:10,co:0},{b:2,co:0}],
+      //       3:[{a:2,co:3},{b:2,co:4}],
+      //       4:[{a:2,co:4},{b:2,co:5}],
+      //       5:[{a:10,co:0},{b:10,co:1}]
+      //     }
+      //   ],
+      //   co:[
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:18
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:12
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:4
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:14
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:6
+      //   },
+      //   {
+      //       total:0,     
+      //       percentage:0,     
+      //       grandTotal:2
+      //   }
+      // ],
+      // },
+      // {
+      //   rollNo:8,
+      //   marks:[
+      //     {
+      //       1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
+      //       2:[{a:10,co:0},{b:2,co:0}],
+      //       3:[{a:2,co:3},{b:2,co:4}],
+      //       4:[{a:2,co:4},{b:2,co:5}],
+      //       5:[{a:10,co:0},{b:10,co:1}]
+      //     }
+      //   ],
+      //   co:[
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:18
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:12
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:4
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:14
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:6
+      //   },
+      //   {
+      //       total:0,   
+      //       percentage:0,       
+      //       grandTotal:2
+      //   }
+      // ],
+      // },
+      // {
+      //   rollNo:9,
+      //   marks:[
+      //     {
+      //       1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
+      //       2:[{a:10,co:0},{b:2,co:0}],
+      //       3:[{a:2,co:3},{b:2,co:4}],
+      //       4:[{a:2,co:4},{b:2,co:5}],
+      //       5:[{a:10,co:0},{b:10,co:1}]
+      //     }
+      //   ],
+      //   co:[
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:18
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:12
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:4
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:14
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:6
+      //   },
+      //   {
+      //       total:0,     
+      //       percentage:0,     
+      //       grandTotal:2
+      //   }
+      // ],
+      // },
+      // {
+      //   rollNo:10,
+      //   marks:[
+      //     {
+      //       1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
+      //       2:[{a:10,co:0},{b:2,co:0}],
+      //       3:[{a:2,co:3},{b:2,co:4}],
+      //       4:[{a:2,co:4},{b:2,co:5}],
+      //       5:[{a:10,co:0},{b:10,co:1}]
+      //     }
+      //   ],
+      //   co:[
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:18
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:12
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:4
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:14
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:6
+      //   },
+      //   {
+      //       total:0,          
+      //       grandTotal:2,
+      //       percentage:0,
+      //   }
+      // ],
+      // },
+      // {
+      //   rollNo:11,
+      //   marks:[
+      //     {
+      //       1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
+      //       2:[{a:10,co:0},{b:2,co:0}],
+      //       3:[{a:2,co:3},{b:2,co:4}],
+      //       4:[{a:2,co:4},{b:2,co:5}],
+      //       5:[{a:10,co:0},{b:10,co:1}]
+      //     }
+      //   ],
+      //   co:[
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:18
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:12
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:4
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:14
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:6
+      //   },
+      //   {
+      //       total:0,
+      //       percentage:0,          
+      //       grandTotal:2
+      //   }
+      // ],
+      // },
+      // {
+      //   rollNo:12,
+      //   marks:[
+      //     {
+      //       1:[{a:2,co:0},{b:2,co:0},{c:2,co:1},{d:2,co:2},{e:2,co:3}],
+      //       2:[{a:10,co:0},{b:2,co:0}],
+      //       3:[{a:2,co:3},{b:2,co:4}],
+      //       4:[{a:2,co:4},{b:2,co:5}],
+      //       5:[{a:10,co:0},{b:10,co:1}]
+      //     }
+      //   ],
+      //   co:[
+      //     {
+      //         total:0,
+      //         percentage:0,          
+      //         grandTotal:18
+      //     },
+      //     {
+      //         total:0,
+      //         percentage:0,          
+      //         grandTotal:12
+      //     },
+      //     {
+      //         total:0,
+      //         percentage:0,          
+      //         grandTotal:4
+      //     },
+      //     {
+      //         total:0,
+      //         percentage:0,          
+      //         grandTotal:14
+      //     },
+      //     {
+      //         total:0,
+      //         percentage:0,          
+      //         grandTotal:6
+      //     },
+      //     {
+      //         total:0,          
+      //         grandTotal:2
+      //     }
+      //   ],
+      // }
     ]
   },
 
@@ -579,7 +575,8 @@ export class Page3Component implements OnInit {
   ]
   };
 
-
+  studentPrototype = null;
+  rollNumberCounter = 1;
 
   
 
@@ -588,12 +585,12 @@ export class Page3Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.generateCo(this.subject.DWM.students);
+    // this.generateCo(this.subject.DWM.students);
     
     
-    this.generateLvl(this.subject);
-    this.calculateAverage(this.subject);
-    console.log(this.subject);
+    // this.generateLvl(this.subject);
+    // this.calculateAverage(this.subject);
+    // console.log(this.subject);
       
   }
 
@@ -628,23 +625,44 @@ export class Page3Component implements OnInit {
     //   }
     // };
     console.log(this.preData);
+    for(let student of this.subject.DWM.students){
+      let questionNo = 1;
+      for(let question of this.preData.data){
+        student.marks[questionNo] = [];
+        let subQuestion = 97;
+        for(let innerDiv of question.innerSubDivs){
+          let alphabeticalSubQuestion = String.fromCharCode(subQuestion);
+          let q = {};
+          q[alphabeticalSubQuestion] = 0;
+          q["co"] = parseInt(innerDiv.co[innerDiv.co.length-1])-1;
+          student.co[q["co"]].grandTotal+= parseInt(innerDiv.marks);  
+          student.marks[questionNo].push(q);
+          subQuestion++;
+        }
+        questionNo++;
+      }
+      student.marks.splice(0,1);
+    }
+    this.studentPrototype = JSON.parse(JSON.stringify(this.subject.DWM.students[0]));
+    console.log(this.subject);
+    
   }
 
   generateCo(subjectStudents){
     console.log(this.preData);
-    // for(let student of subjectStudents){
-    //   console.log("roll no="+student.rollNo);
-    //   for(let questionNo of Object.keys(student.marks[0])){
-    //     for(let question of student.marks[0][questionNo]){
-    //       console.log(question.co);
-    //       student.co[question.co].total += parseInt(question.a) || parseInt(question.b) || parseInt(question.c) || parseInt(question.d) || parseInt(question.e); 
-    //     }
-    //   }
+    for(let student of subjectStudents){
+      console.log("roll no="+student.rollNo);
+      for(let questionNo of student.marks){
+        for(let question of questionNo){
+          console.log(question.co);
+          student.co[question.co].total += parseInt(question.a) || parseInt(question.b) || parseInt(question.c) || parseInt(question.d) || parseInt(question.e); 
+        }
+      }
 
-    //   for(let co of student.co){
-    //     co.percentage = parseFloat((co.total/co.grandTotal).toFixed(2)) * 100;
-    //   }
-    // }
+      for(let co of student.co){
+        co.percentage = parseFloat((co.total/co.grandTotal).toFixed(2)) * 100;
+      }
+    }
     
   }
 
@@ -691,6 +709,22 @@ export class Page3Component implements OnInit {
       let average = (3 * testType.levels[2][i] + 2 * testType.levels[1][i] + testType.levels[0][i])/totalStudents;
       testType.average.push(average);
     }
+  }
+
+  addNewStudent(){
+    this.rollNumberCounter++;
+    let student = this.studentPrototype;
+    student.rollNo = this.rollNumberCounter;
+    this.subject.DWM.students.push(student);
+    console.log(this.subject);
+  }
+
+  generateStats(){
+    this.generateCo(this.subject.DWM.students);
+    
+    
+    this.generateLvl(this.subject);
+    this.calculateAverage(this.subject);
   }
 
 }

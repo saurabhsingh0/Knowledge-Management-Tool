@@ -67,7 +67,20 @@
         </div>
       </div>
     </div>
-
+    <div *ngIf="subject.DWM.students[0].marks.length>0">
+      <div *ngFor="let student of subject.DWM.students;let j = index">
+        Roll Number {{ student.rollNo }}
+        <div *ngFor="let question of student.marks;let i = index">
+          <div>Question {{ i+1 }}:</div>
+          <div>
+            <input type="text" *ngFor="let subQuestion of question" [(ngModel)]="subQuestion[Object.keys(subQuestion)[0]]"> &nbsp;
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <button (click)="addNewStudent()">Add Student</button>
+    <button (click)="generateStats()">Generate</button>
     <table class="table table-striped">
       <thead>
         <th>Roll Number</th>

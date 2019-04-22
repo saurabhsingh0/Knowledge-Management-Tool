@@ -575,6 +575,33 @@ export class Page3Component implements OnInit {
   ]
   };
 
+  initialLevels = JSON.parse(JSON.stringify([
+    {
+     0:0,
+     1:0,
+     2:0,
+     3:0,
+     4:0,
+     5:0
+    },
+    {
+     0:0,
+     1:0,
+     2:0,
+     3:0,
+     4:0,
+     5:0
+    },
+    {
+     0:0,
+     1:0,
+     2:0,
+     3:0,
+     4:0,
+     5:0
+    }]
+    ));
+
   studentPrototype = null;
   rollNumberCounter = 1;
 
@@ -685,6 +712,33 @@ export class Page3Component implements OnInit {
   }
 
   generateLvl(testType){
+    testType.levels = [
+      {
+       0:0,
+       1:0,
+       2:0,
+       3:0,
+       4:0,
+       5:0
+      },
+      {
+       0:0,
+       1:0,
+       2:0,
+       3:0,
+       4:0,
+       5:0
+      },
+      {
+       0:0,
+       1:0,
+       2:0,
+       3:0,
+       4:0,
+       5:0
+      }
+    ];
+    console.log(testType.levels);
     for(let student of testType.DWM.students){
       let coIndex = 0;
       for(let co of student.co){

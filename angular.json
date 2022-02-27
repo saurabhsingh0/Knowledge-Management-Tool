@@ -27,9 +27,23 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/style.css",
+              "src/assets/css/breadcrumb.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/contact.js",
+              "src/assets/js/countdown.js",
+              "src/assets/js/gmaps.min.js",
+              "src/assets/js/jquery.ajaxchimp.min.js",
+              "src/assets/js/jquery.form.js",
+              "src/assets/js/jquery.validate.min.js",
+              "src/assets/js/mail-script.js",
+              "src/assets/js/owl-carousel-thumb.min.js",
+              "src/assets/js/popper.js",
+              "src/assets/js/stellar.js",
+              "src/assets/js/theme.js"
+            ]
           },
           "configurations": {
             "production": {

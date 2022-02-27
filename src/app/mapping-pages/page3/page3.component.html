@@ -1,0 +1,156 @@
+
+<div style="width:90%;margin:0 auto;">
+  <input type="text" [(ngModel)]="preData.questions">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" (click)=" openDetailsPopup()" aria-placeholder="">
+      Open modal
+    </button>
+</div>
+
+  
+        <!-- <span *ngFor="let question of preData.data;let i = index">
+            <div *ngFor="let sub of question[i];let inner = index">
+                {{ i+1 }}
+            </div>
+        </span> -->
+        
+   
+
+
+   <!-- The Modal -->
+   <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+              <table class="table table-striped">
+                  <thead>
+                    <th>Question</th>
+                    <th>No of Sub questions</th>
+                    <th>Marks of Questions</th>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let question of preData.data;let i = index">
+                          <td>{{ i+1  }}</td> 
+                          <td><input type="text" [(ngModel)]="question['subDivs']" (keyup)="changeSubQuest(question.subDivs,i)"></td>
+                          <td *ngFor="let each of question.innerSubDivs,let j=index">
+                            <input type="text" [(ngModel)]="each['marks']" style="width:50px;">
+                            <!-- <input type="text" [(ngModel)]="each['co']" style="width:50px;"> -->
+                            <select class="select-tag" [(ngModel)]="each['co']">
+                              <option  selected value="empty"></option>
+                              <option value="CO1">CO1</option>
+                              <option value="CO2">CO2</option>
+                              <option value="CO3">CO3</option>
+                              <option value="CO4">CO4</option>
+                              <option value="CO5">CO5</option>
+                              <option value="CO6">CO6</option> 
+                            </select>
+                          </td>
+                      </tr>     
+                  </tbody>
+                </table>
+               
+          </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-lg btn-success" (click)="generateTable()">Done</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div *ngIf="subject.DWM.students[0].marks.length>0">
+      <div *ngFor="let student of subject.DWM.students;let j = index">
+        Roll Number {{ student.rollNo }}
+        <div *ngFor="let question of student.marks;let i = index">
+          <div>Question {{ i+1 }}:</div>
+          <div>
+            <input type="text" *ngFor="let subQuestion of question" [(ngModel)]="subQuestion[Object.keys(subQuestion)[0]]"> &nbsp;
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <button (click)="addNewStudent()">Add Student</button>
+    <button (click)="generateStats()">Generate</button>
+    <table class="table table-striped">
+      <thead>
+        <th>Roll Number</th>
+        <th>CO1</th>
+        <th>CO2</th>
+        <th>CO3</th>
+        <th>CO4</th>
+        <th>CO5</th>
+        <th>CO6</th>
+        <th>CO1 %</th>
+        <th>CO2 %</th>
+        <th>CO3 %</th>
+        <th>CO4 %</th>
+        <th>CO5 %</th>
+        <th>CO6 %</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of subject.DWM.students">
+          <td>{{student.rollNo}}</td>
+          <td *ngFor="let co of student.co">
+            {{ co.total }}
+          </td>
+          <td *ngFor="let co of student.co">
+            {{ co.percentage| number:'1.0-2' }}
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table table-striped">
+      <thead>
+        <th>Level</th>
+        <th>CO1</th>
+        <th>CO2</th>
+        <th>CO3</th>
+        <th>CO4</th>
+        <th>CO5</th>
+        <th>CO6</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let level of subject.levels;let i = index">
+          <td>Level {{ i+1 }}</td>
+          <td>{{ level[0] }}</td>
+          <td>{{ level[1] }}</td>
+          <td>{{ level[2] }}</td>
+          <td>{{ level[3] }}</td>
+          <td>{{ level[4] }}</td>
+          <td>{{ level[5] }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table table-striped">
+      <thead>
+        <th>Average</th>
+        <th>CO1</th>
+        <th>CO2</th>
+        <th>CO3</th>
+        <th>CO4</th>
+        <th>CO5</th>
+        <th>CO6</th>
+      </thead>
+      <tbody>
+        <tr >
+          <td>AVG.</td>
+          <td *ngFor="let avg of subject.average">
+            {{ avg }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+

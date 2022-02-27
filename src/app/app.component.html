@@ -1,20 +1,113 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<header class="header_area">
+		<div class="header-top">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6 col-sm-6 col-4 header-top-left">
+						<a href="tel:+9530123654896">
+							<span class="lnr lnr-phone"></span>
+							<span class="text">
+								<span class="text">+953012 3654 896</span>
+							</span>
+						</a>
+						<a href="mailto:support@colorlib.com">
+							<span class="lnr lnr-envelope"></span>
+							<span class="text">
+								<span class="text">support@colorlib.com</span>
+							</span>
+						</a>
+					</div>
+					<div class="col-lg-6 col-sm-6 col-8 header-top-right">
+						<a class="text-uppercase" (click)="open(content)" style="color:white;" *ngIf="!this.userId">Login</a>
+						<a class="text-uppercase" (click)="logout()" style="color:white;" *ngIf="this.userId">Logout</a>
+						<!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main_menu">
+			<div class="search_input" id="search_input_box">
+				<div class="container">
+					<form class="d-flex justify-content-between" method="" action="">
+						<input type="text" class="form-control" id="search_input" placeholder="Search Here">
+						<button type="submit" class="btn"></button>
+						<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+					</form>
+				</div>
+			</div>
 
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="index.html"><img src="../assets/img/logo.png" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar">Saurabh</span>
+						<span class="icon-bar">Ashu</span>
+						<span class="icon-bar">Awes</span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Pages</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+									<li class="nav-item"><a class="nav-link" href="course-details.html">Course Details</a></li>
+									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+								</ul>
+							</li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Blog</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+							<li class="nav-item">
+								<a href="#" class="nav-link search" id="search">
+									<i class="lnr lnr-magnifier"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<ng-template #content let-modal>
+		<div class="modal-header" style="background-color:lightseagreen;">
+		  <h4 class="modal-title" id="modal-basic-title">Login</h4>
+		  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <!-- <form> -->
+			<div class="form-group">
+			  <label for="dateOfBirth">email </label>
+			  <div class="input-group">
+				<input type="text" id="emaiId" class="form-control" placeholder="email id" [(ngModel)]="email">
+			  </div>
+			  <label for="dateOfBirth">Password </label>
+			  <div class="input-group">
+				<input type="password" id="password" class="form-control" placeholder="password" [(ngModel)]="password">
+			  </div>
+			  <!-- <button class="btn btn-primary" (click)="login()">Login</button> -->
+			</div>
+		  <!-- </form> -->
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-outline-dark" (click)="login()" (click)="modal.dismiss('Cross click')">Login</button>
+		</div>
+	  </ng-template>
+	<!--================ End Header Menu Area =================-->
+
+	<!--================ Start Feature Area =================-->
+
+<router-outlet></router-outlet>

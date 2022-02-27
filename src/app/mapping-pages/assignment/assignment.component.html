@@ -1,0 +1,70 @@
+<h3>Assignments</h3>
+    <table class="table table-striped">
+      <thead>
+        <th>CO1</th>
+        <th>CO2</th>
+        <th>CO3</th>
+        <th>CO4</th>
+        <th>CO5</th>
+        <th>CO6</th>
+        <th>CO1 %</th>
+        <th>CO2 %</th>
+        <th>CO3 %</th>
+        <th>CO4 %</th>
+        <th>CO5 %</th>
+        <th>CO6 %</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of assignmentMapping.DWM.students">
+          <td *ngFor="let co of student.co">
+            {{ co.total }}
+          </td>
+          <td *ngFor="let co of student.co">
+              {{ co.percentage| number:'1.0-2' }}
+            </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table table-striped">
+        <thead>
+          <th>Level</th>
+          <th>CO1</th>
+          <th>CO2</th>
+          <th>CO3</th>
+          <th>CO4</th>
+          <th>CO5</th>
+          <th>CO6</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let level of assignmentMapping.levels;let i = index">
+            <td>Level {{ i+1 }}</td>
+            <td>{{ level[0] }}</td>
+            <td>{{ level[1] }}</td>
+            <td>{{ level[2] }}</td>
+            <td>{{ level[3] }}</td>
+            <td>{{ level[4] }}</td>
+            <td>{{ level[5] }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <table class="table table-striped">
+        <thead>
+          <th>Average</th>
+          <th>CO1</th>
+          <th>CO2</th>
+          <th>CO3</th>
+          <th>CO4</th>
+          <th>CO5</th>
+          <th>CO6</th>
+        </thead>
+        <tbody>
+          <tr >
+            <td>AVG.</td>
+            <td *ngFor="let avg of assignmentMapping.average">
+              {{ avg }}
+            </td>
+          </tr>
+        </tbody>
+      </table>

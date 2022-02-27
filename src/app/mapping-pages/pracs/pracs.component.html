@@ -1,0 +1,131 @@
+<div style="width:85%;margin: 0 auto;">
+  <button (click)="goToCourseSurvey()" class="btn btn-primary">Next</button>
+  <h2>{{ pracs.subject }}</h2>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Roll No</th>
+        <th scope="col">Pracs 1</th>
+        <th scope="col">Pracs 2</th>
+        <th scope="col">Pracs 3</th>
+        <th scope="col">Pracs 4</th>
+        <th scope="col">Pracs 5</th>
+        <th scope="col">Pracs 6</th>
+        <th scope="col">Pracs 7</th>
+        <th scope="col">Pracs 8</th>
+        <th scope="col">Pracs 9</th>
+        <th scope="col">Pracs 10</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let marks of pracs['marks'], let i=index">
+        <td>{{marks['rollNo']}}</td>
+        <td>{{marks["pracs 1"]}}</td>
+        <td>{{marks["pracs 2"]}}</td>
+        <td>{{marks["pracs 3"]}}</td>
+        <td>{{marks["pracs 4"]}}</td>
+        <td>{{marks["pracs 5"]}}</td>
+        <td>{{marks["pracs 6"]}}</td>
+        <td>{{marks["pracs 7"]}}</td>
+        <td>{{marks["pracs 8"]}}</td>
+        <td>{{marks["pracs 9"]}}</td>
+        <td>{{marks["pracs 10"]}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Levels CO</h2>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Sr NO</th>
+        <th *ngFor="let level of pracs.levels">pracs {{ level.pracs }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Level 1</td>
+        <td *ngFor="let level of pracs.levels">{{ level.level["level-1"]}}</td>
+      </tr>
+      <tr>
+        <td> Level 2</td>
+        <td *ngFor="let level of pracs.levels">{{ level.level["level-2"]}}</td>
+      </tr>
+      <tr>
+        <td>Level 3</td>
+        <td *ngFor="let level of pracs.levels">{{ level.level["level-3"]}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th></th>
+        <th *ngFor="let level of pracs.levels">pracs {{ level.pracs }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>CO1</td>
+        <td *ngFor="let map of pracs.coMapping">{{ map["co-attainment"] }}</td>
+      </tr>
+      <tr>
+        <td>CO2</td>
+        <td *ngFor="let map of pracs.coMapping">{{ map["co-attainment"] }}</td>
+      </tr>
+      <tr>
+        <td>CO3</td>
+        <td *ngFor="let map of pracs.coMapping">{{ map["co-attainment"] }}</td>
+      </tr>
+      <tr>
+        <td>CO4</td>
+        <td *ngFor="let map of pracs.coMapping">{{ map["co-attainment"] }}</td>
+      </tr>
+      <tr>
+        <td>CO5</td>
+        <td *ngFor="let map of pracs.coMapping">{{ map["co-attainment"] }}</td>
+      </tr>
+      <tr>
+        <td>CO6</td>
+        <td *ngFor="let map of pracs.coMapping">{{ map["co-attainment"] }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Average Course Survey CO Attainment</h2>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th *ngFor="let outcome of mappingService.avgCOPracsAttainment">CO {{ outcome['co'] }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th *ngFor="let outcome of mappingService.avgCOPracsAttainment">{{ outcome['avgAttainment']}}</th>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h2>Avg PO Attainemnt</h2>
+  <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th *ngFor="let po of coPoMapping[0], let i=index">PO {{ i+1 }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let po of coPoMapping,let i=index">
+          <td>CO {{ i+1}}</td>
+          <td *ngFor="let value of po">{{ value }}</td>
+        </tr>
+        <tr>
+          <td>Avg</td>
+          <td *ngFor="let avgPo of mappingService.avgPOPracsAttainment">{{ avgPo }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+</div>
